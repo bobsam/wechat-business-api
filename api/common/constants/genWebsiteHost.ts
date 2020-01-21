@@ -1,0 +1,1 @@
+export const websiteHost = ['knurl.cn', 'maiyurl.cn', 'dogdwz.cn', 'tttool.cn', 'lnurl.cn'];

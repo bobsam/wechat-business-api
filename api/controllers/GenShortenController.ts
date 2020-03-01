@@ -2,9 +2,8 @@ import { Controller, Get, Use, Param, Body, Delete, Put, Post, QueryParam, View,
 import Ok from '../responses/ok';
 import {GenShortenManager} from '../managers/GenShortenManager';
 import {ShortenType} from '../common/enums/alapiShortenType';
-import {URLS, URLS_QUERY_KEYS} from '../common/constants/url';
-
-import * as qs from 'querystring';
+import {getGoodsUrl} from '../common/utils/getGoodsUrl';
+import {AccountConfig} from '../common/accountConfig';
 
 @Controller("/api")
 export default class {
@@ -30,6 +29,13 @@ export default class {
         };
     }
 
+    /**
+     * 从alapi生成短链接
+     *
+     * @param {*} ctx
+     * @param {*} query
+     * @returns
+     */
     @Get('/genUrlByAlapi')
     @Response(Ok)
     async genUrlFromAlapi (@Ctx() ctx, @QueryParam() query) {
@@ -43,6 +49,13 @@ export default class {
         });
     }
 
+    /**
+     * 从Sojson生成短链接
+     *
+     * @param {*} ctx
+     * @param {*} query
+     * @returns
+     */
     @Get('/genUrlBySojson')
     @Response(Ok)
     async genUrlFromSojson (@Ctx() ctx, @QueryParam() query) {
@@ -61,19 +74,19 @@ export default class {
 
     @Get('/getCoolbuyWebUrl')
     @Response(Ok)
-    async getCoolbuyWebUrl (@Ctx() ctx, @QueryParam() query) {
+    getCoolbuyWebUrl (@Ctx() ctx, @QueryParam() query) {
         const type = decodeURIComponent(query.type || '');
-        let url = '';
-        let urlQuery: any = {};
+        const user = decodeURIComponent(query.user || '');
+        const id = decodeURIComponent(query.id || '');
 
-        if (type === 'web') {
-            url = URLS.CoolbuyWebUrl;
-        } else if (type === 'mp') {
-            url = URLS.CoolbuyMpUrl;
-        }
+        let url = getGoodsUrl(type, user, id);
 
-        // URLS_QUERY_KEYS.forEach(item => {
-        //     urlQuery[item]
-        // })
+        return url;
+    }
+
+    @Get('/getCoolbuyAccount')
+    @Response(Ok)
+    getAccountConfig (@Ctx() ctx, @QueryParam() query) {
+        return AccountConfig;
     }
 }

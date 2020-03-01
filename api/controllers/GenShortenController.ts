@@ -64,7 +64,7 @@ export default class {
     async getCoolbuyWebUrl (@Ctx() ctx, @QueryParam() query) {
         const type = decodeURIComponent(query.type || '');
         let url = '';
-        let urlQuery: unknown = {};
+        let urlQuery: any = {};
 
         if (type === 'web') {
             url = URLS.CoolbuyWebUrl;

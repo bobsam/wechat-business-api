@@ -10,3 +10,8 @@
 ::1 - - [21/Jan/2020:03:17:20 +0000] "GET /favicon.ico HTTP/1.1" 404 9 "http://localhost:9293/api/search?g=%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
 ::1 - - [21/Jan/2020:06:22:04 +0000] "GET /api/search?g=%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6 HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
 ::1 - - [28/Jan/2020:04:57:42 +0000] "GET / HTTP/1.1" 404 9 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+::1 - - [01/Mar/2020:07:47:58 +0000] "GET / HTTP/1.1" 404 9 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
+::1 - - [01/Mar/2020:07:47:59 +0000] "GET /favicon.ico HTTP/1.1" 404 9 "http://localhost:9293/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
+::1 - - [01/Mar/2020:07:48:08 +0000] "GET /api/search?g=ss HTTP/1.1" 404 9 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
+::1 - - [01/Mar/2020:07:48:09 +0000] "GET /api/search?g=ss HTTP/1.1" 404 9 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"
+::1 - - [01/Mar/2020:07:49:46 +0000] "GET /api/search?g=ss HTTP/1.1" 200 359 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36"

@@ -17,4 +17,12 @@ export default class {
 
         return result;
     }
+
+    @Get("/detail")
+    @Response(Ok)
+    async showCoolbuyGoodsDetail(@Ctx() ctx, @QueryParam() query) {
+        const result = await this.searchManager.getCoolbuyGoodsDetail(decodeURIComponent(query.id || ''));
+
+        return result;
+    }
 }

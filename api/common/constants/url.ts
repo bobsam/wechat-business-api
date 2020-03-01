@@ -3,4 +3,4 @@ export const URLS = {
     CoolbuyMpUrl: 'pages/detail/detail'
 };
 
-export const URLS_QUERY_KEYS = ['id', 'utm_source', 'utm_medium', 'affid'];
+export const URLS_QUERY_KEYS = ['type', 'id', 'utm_source', 'utm_medium', 'affid'];

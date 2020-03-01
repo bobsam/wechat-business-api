@@ -1,4 +1,5 @@
 import * as qs from 'querystring';
+import { ManagerError } from '../errors/ManagerError';
 
 export class SearchManager {
     async searchCoolbuyGoods (text: string) {
@@ -21,6 +22,31 @@ export class SearchManager {
             }
         }, {
             userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+        });
+        
+        return result;
+    }
+
+    async getCoolbuyGoodsDetail (id: string) {
+        if (!id) {
+            throw new ManagerError('没有商品id！');
+        }
+
+        let requestParams = {
+            img_size: 'large'
+        };
+
+        const result = await app.services.RequestService.request({
+            method: 'GET',
+            url: `https://coolbuy.com/api/v1.4/product/${id}/`,
+            paramObj: {
+                params: qs.stringify(requestParams)
+            }
+        }, {
+            userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+            referer: 'https://coolbuy.com/product/detail/7452/?utm_source=xiaojj&utm_medium=pengyouquan&affid=NfIthH',
+            pragma: 'no-cache',
+            'cache-control': 'no-cache'
         });
         
         return result;

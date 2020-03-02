@@ -1,7 +1,7 @@
 /**
  * @Author: 小贤
  * @Date: 2020-03-01 21:31:28
- * @LastEditTime: 2020-03-01 23:41:45
+ * @LastEditTime: 2020-03-02 21:00:13
  * @LastEditors: 小贤
  * @Description: 
  * @Email: gzyuboxian@corp.netease.com
@@ -31,10 +31,12 @@ export function getGoodsUrl (type: string, user: string, id: string): string {
 
     userMsg = AccountConfig[user];
 
-    delete userMsg.chn_name;
-    delete userMsg.medium_name;
+    const newUserMsg = Object.assign({}, userMsg);
 
-    urlSuffix = qs.stringify(userMsg);
+    delete newUserMsg.chn_name;
+    delete newUserMsg.medium_name;
+
+    urlSuffix = qs.stringify(newUserMsg);
 
     return url && urlSuffix ? `${url}${urlSuffix}` : '';
 }

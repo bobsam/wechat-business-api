@@ -45,7 +45,8 @@ export default class {
         return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
             method: 'POST',
             url: decodeURIComponent(query.url || ''),
-            type: ShortenType[decodeURIComponent(query.type || 't.cn')]
+            type: ShortenType[decodeURIComponent(query.type || 't.cn')],
+            format: 'json'
         });
     }
 

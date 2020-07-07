@@ -30,26 +30,6 @@ export default class {
     }
 
     /**
-     * 从https://www.mynb8.com/生成短链接
-     *
-     * @param {*} ctx
-     * @param {*} query
-     * @returns
-     */
-    @Get('/genUrlByMynb8')
-    @Response(Ok)
-    async genUrlFromMynb8 (@Ctx() ctx, @QueryParam() query) {
-        const baseUrl = 'https://www.mynb8.com'
-        const reqUrl = baseUrl + '/api3/urlcn.html';
-
-        return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
-            method: 'GET',
-            long_url: decodeURIComponent(query.url || ''),
-            appkey: '7a429a09ceaa0e3ace92e7c0e03a6a22'
-        });
-    }
-
-    /**
      * 从https://api.tool.dute.me/生成短链接
      *
      * @param {*} ctx
@@ -63,7 +43,7 @@ export default class {
         const reqUrl = baseUrl + '/tool/urlShorten';
 
         return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
-            method: 'GET',
+            method: 'POST',
             url: decodeURIComponent(query.url || ''),
             action: 'shorten',
             strategy: 'QqUrlShorten'

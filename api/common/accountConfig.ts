@@ -1,10 +1,10 @@
 /**
  * @Author: 小贤
  * @Date: 2020-03-01 21:42:15
- * @LastEditTime: 2020-07-07 10:33:29
+ * @LastEditTime: 2020-07-07 10:36:39
  * @LastEditors: 小贤
  * @Description: 
- * @Email: gzyuboxian@corp.netease.com
+ * @Email: 
  */
 
 export const AccountConfig = {

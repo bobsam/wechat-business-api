@@ -1,10 +1,10 @@
 /**
  * @Author: 小贤
  * @Date: 2020-03-01 21:31:28
- * @LastEditTime: 2020-03-02 21:00:13
+ * @LastEditTime: 2020-07-07 10:36:48
  * @LastEditors: 小贤
  * @Description: 
- * @Email: gzyuboxian@corp.netease.com
+ * @Email: 
  */
 
 import {URLS} from '../constants/url';

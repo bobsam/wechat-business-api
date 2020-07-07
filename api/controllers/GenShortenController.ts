@@ -30,6 +30,27 @@ export default class {
     }
 
     /**
+     * 从https://api.tool.dute.me/生成短链接
+     *
+     * @param {*} ctx
+     * @param {*} query
+     * @returns
+     */
+    @Get('/genUrlByDute')
+    @Response(Ok)
+    async genUrlFromDute (@Ctx() ctx, @QueryParam() query) {
+        const baseUrl = 'https://api.tool.dute.me'
+        const reqUrl = baseUrl + '/tool/urlShorten';
+
+        return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
+            method: 'POST',
+            url: decodeURIComponent(query.url || ''),
+            action: 'shorten',
+            strategy: 'QqUrlShorten'
+        });
+    }
+
+    /**
      * 从alapi生成短链接
      *
      * @param {*} ctx

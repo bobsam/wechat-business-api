@@ -1,7 +1,7 @@
 /**
  * @Author: 小贤
  * @Date: 2020-03-01 21:42:15
- * @LastEditTime: 2020-03-01 21:53:58
+ * @LastEditTime: 2020-07-07 10:25:56
  * @LastEditors: 小贤
  * @Description: 
  * @Email: gzyuboxian@corp.netease.com
@@ -21,6 +21,20 @@ export const AccountConfig = {
         'affid': 'wGE4Il',
         'chn_name': 'A君（通用）',
         'medium_name': 'A君'
+    },
+    'fuli': {
+        'utm_source': 'fuli',
+        'utm_medium': 'shequn',
+        'affid': '670Igb',
+        'chn_name': '社群 - 福利群',
+        'medium_name': '福利群（玩物君）'
+    },
+    'vip': {
+        'utm_source': 'vip',
+        'utm_medium': 'shequn',
+        'affid': 'QyI8KS',
+        'chn_name': 'VIP 群',
+        'medium_name': 'VIP 群'
     },
     'Ajun1': {
         'utm_source': 'Ajun',

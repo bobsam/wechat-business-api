@@ -49,7 +49,7 @@ export class GenShortenManager {
         return result;
     }
 
-    async shortenUrlFromThirdPaty (reqUrl: string, config: any) {
+    async shortenUrlFromThirdPaty (reqUrl: string, config: any, headers?: any) {
         const method = config.method.toUpperCase() || 'GET';
 
         delete config.method;
@@ -62,7 +62,8 @@ export class GenShortenManager {
             },
             bForm: (method as string).toUpperCase() === 'POST'
         }, {
-            userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+            userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",
+            ...headers
         });
     }
 }

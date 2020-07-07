@@ -48,6 +48,11 @@ export default class {
             url: decodeURIComponent(query.url || ''),
             action: 'shorten',
             strategy: 'QqUrlShorten'
+        }, {
+            accept: '*/*',
+            origin: 'https://www.dute.org',
+            pragma: 'no-cache',
+            referer: 'https://www.dute.org/url-shorten'
         });
     }
 

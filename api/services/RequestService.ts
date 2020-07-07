@@ -62,7 +62,7 @@ export default {
     
             app.logger.info('[request success info:]' + requestParam.url, { paramObj: requestParam.paramObj, method, result, requestHeader });
     
-            return result;
+            return typeof result === 'string' && result !== '' ? JSON.parse(result) : result;
         } catch (error) {
             console.error(error);
             app.logger.error("[request error info:]" + requestParam.url, { paramObj: requestParam.paramObj, method: method, error, requestHeader });

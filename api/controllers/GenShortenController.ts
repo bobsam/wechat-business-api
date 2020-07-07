@@ -45,7 +45,7 @@ export default class {
         return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
             method: 'POST',
             bForm: true,
-            url: encodeURIComponent(query.url || ''),
+            url: query.url || '',
             action: 'shorten',
             strategy: 'QqUrlShorten'
         }, {

@@ -43,7 +43,7 @@ export default class {
         const reqUrl = baseUrl + '/tool/urlShorten';
 
         return await this.genShortenManager.shortenUrlFromThirdPaty(reqUrl, {
-            method: 'POST',
+            method: 'GET',
             url: decodeURIComponent(query.url || ''),
             action: 'shorten',
             strategy: 'QqUrlShorten'

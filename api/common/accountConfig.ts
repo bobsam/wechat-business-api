@@ -1,7 +1,7 @@
 /**
  * @Author: 小贤
  * @Date: 2020-03-01 21:42:15
- * @LastEditTime: 2020-07-07 10:25:56
+ * @LastEditTime: 2020-07-07 10:33:29
  * @LastEditors: 小贤
  * @Description: 
  * @Email: gzyuboxian@corp.netease.com
@@ -33,7 +33,7 @@ export const AccountConfig = {
         'utm_source': 'vip',
         'utm_medium': 'shequn',
         'affid': 'QyI8KS',
-        'chn_name': 'VIP 群',
+        'chn_name': '社群 - VIP 群',
         'medium_name': 'VIP 群'
     },
     'Ajun1': {

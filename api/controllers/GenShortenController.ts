@@ -49,6 +49,11 @@ export default class {
             action: 'shorten',
             strategy: 'QqUrlShorten'
         }, {
+            ':authority': 'api.tool.dute.me',
+            ':method': 'POST',
+            ':path': '/tool/urlShorten',
+            ':scheme': 'https',
+            dnt: '1',
             accept: '*/*',
             origin: 'https://www.dute.org',
             pragma: 'no-cache',

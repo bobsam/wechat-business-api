@@ -17,7 +17,7 @@
         "koa-body": "^2.1.0",
         "koa-cola": "^0.7.0",
         "lodash": "^4.17.15",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "redux-thunk": "2.2.0",
         "request": "^2.88.0",
         "request-promise-native": "^1.0.8",
